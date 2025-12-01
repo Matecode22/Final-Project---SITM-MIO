@@ -1,7 +1,15 @@
 package graph;
 
-import java.util.*;
-import model.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import model.Arc;
+import model.LineStop;
+import model.Route;
+import model.Stop;
 
 public class GraphBuilder {
 
@@ -10,7 +18,7 @@ public class GraphBuilder {
             List<Stop> stops,
             List<LineStop> lineStops
     ) {
-        // Crear mapa de paradas para acceso rápido
+        // Crear mapa de paradas 
         Map<Integer, Stop> stopMap = new HashMap<>();
         for (Stop s : stops) {
             stopMap.put(s.getStopId(), s);
@@ -45,7 +53,6 @@ public class GraphBuilder {
 
             RouteGraph graph = new RouteGraph(lineId, orient);
             
-            // Asignar nombre de la ruta si existe
             Route route = routeMap.get(lineId);
             if (route != null) {
                 graph.setRouteName(route.getShortName());

@@ -1,6 +1,9 @@
 package loader;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import model.Stop;
 
 public class StopCsvParser {
@@ -29,7 +32,7 @@ public class StopCsvParser {
             }
         }
         
-        System.out.println("✓ Cargadas " + stops.size() + " paradas desde " + path);
+        System.out.println(" Cargadas " + stops.size() + " paradas desde " + path);
         return stops;
     }
 }

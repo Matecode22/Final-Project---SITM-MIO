@@ -1,6 +1,9 @@
 package loader;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import model.Route;
 
 public class LineCsvParser {
@@ -27,7 +30,7 @@ public class LineCsvParser {
             }
         }
         
-        System.out.println("✓ Cargadas " + routes.size() + " rutas desde " + path);
+        System.out.println(" Cargadas " + routes.size() + " rutas desde " + path);
         return routes;
     }
 }
